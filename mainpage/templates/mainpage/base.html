@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} Base Title {% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+</head>
+<body>
+<nav class="navbar navbar-expand-xxl bg-body-tertiary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{% url 'home' %}">Logo</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Главная</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Услуги
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{% url 'stair' %}">Лестницы</a></li>
+            <li><a class="dropdown-item" href="{% url 'shelter' %}">Навесы</a></li>
+            <li><a class="dropdown-item" href="{% url 'pergola' %}">Беседки</a></li>
+            <li><a class="dropdown-item" href="{% url 'fence' %}">Заборы</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Проекты</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Отзывы</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Контакты</a>
+        </li>
+      </ul>
+      <span class="navbar-text" style="text-align: right">
+        +7 900 111-05-54
+      </span>
+    </div>
+  </div>
+</nav>
+{% block content %}
+{% endblock %}
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Get connected with us on social networks:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>как заказать
+          </h6>
+          <p>
+            Вы можете обратиться любым удобным для Вас способом. Наш менеджер Вас оперативно проконсультирует,
+            а замерщик приедет в удобное время с образцами изделий.
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            услуги
+          </h6>
+          <p>
+            <a href="{% url 'stair' %}" class="text-reset">Лестницы</a>
+          </p>
+          <p>
+            <a href="{% url 'shelter' %}" class="text-reset">Навесы</a>
+          </p>
+          <p>
+            <a href="{% url 'pergola' %}" class="text-reset">Беседки</a>
+          </p>
+          <p>
+            <a href="{% url 'fence' %}" class="text-reset">Ограждения</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            ссылки
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Проекты</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Отзывы</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Как проехать</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Канал на YouTube</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Контакты</h6>
+          <p><i class="fas fa-home me-3"></i> Тверь, ул. Спартака, д. 47</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            info@metall69.ru
+          </p>
+          <p><i class="fas fa-print me-3"></i> + 7 900 111 05 54</p>
+          <p><i class="fas fa-phone me-3"></i> + 7 4822 64 94 89</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2023 Copyright:
+    <a class="text-reset fw-bold" href="{% url 'home' %}">ПМК МеталлПрофи</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
