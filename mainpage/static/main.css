@@ -1,0 +1,16 @@
+/* MainScreen */
+
+#main_screen {
+    height: 300px;
+    background-image: url(/mainpage/static/1.jpg);
+    background-color: #6DDCBD;
+}
+
+.h1_txt {
+    text-transform: uppercase;
+    color: #000;
+}
+
+.h1_txt > h1 {
+    font-weight: bold;
+}
