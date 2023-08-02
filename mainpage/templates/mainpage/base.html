@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="{{ STATIC_URL}}/static/main.css">
 </head>
 <body>
+<div class="top-header">
+  <div class="top-header-bool"></div>
+  <div class="top-header-bool">Тверь, ул. Спартака, д. 47</div>
+  <div class="top-header-bool">+ 7 (900) 111 05 54</div>
+  <div class="top-header-bool">info@metall69.ru</div>
+  <div class="top-header-bool"></div>
+</div>
 <nav class="navbar navbar-expand-xxl bg-body-tertiary" data-bs-theme="dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="{% url 'home' %}">Logo</a>
@@ -39,9 +46,9 @@
           <a class="nav-link" href="#">Контакты</a>
         </li>
       </ul>
-      <span class="navbar-text" style="text-align: right">
-        +7 900 111-05-54
-      </span>
+<!--      <span class="navbar-text" style="text-align: right">-->
+<!--        +7 900 111-05-54-->
+<!--      </span>-->
     </div>
   </div>
 </nav>
@@ -53,6 +60,12 @@
         {% endblock %}
     </h1>
   </div>
+    <h2>
+      {% block h2_desc %}
+        Base H2
+        {% endblock %}
+    </h2>
+
   {% block main_img %}
 {% endblock %}
 
