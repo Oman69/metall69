@@ -52,10 +52,29 @@ body {
     color: #fff;
     padding: 10px 60px;
     /*text-transform: uppercase;*/
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 .btn_primary:hover {
     background-color: transparent;
     padding: 10px 60px;
     color: #000;
+}
+
+/*SecondScreen*/
+
+#big_txt {
+    max-width: 68%;
+    margin: 150px auto;
+    text-align: justify;
+}
+
+.home_bools {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 60px;
+    grid-auto-rows: auto;
+    margin-bottom: 20px;
 }
