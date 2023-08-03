@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -53,18 +54,28 @@
   </div>
 </nav>
 <section id="main_screen">
-  <div class="h1_txt">
+  <span></span>
+  <span>
+    <div class="h1_txt">
     <h1>
         {% block h1 %}
         Base H1
         {% endblock %}
     </h1>
   </div>
+    <div class="h2_txt">
     <h2>
       {% block h2_desc %}
         Base H2
         {% endblock %}
     </h2>
+    </div>
+    <span class="main_btn">
+        <button type="button" class="btn_primary">Подробнее</button>
+
+    </span>
+  </span>
+
 
   {% block main_img %}
 {% endblock %}

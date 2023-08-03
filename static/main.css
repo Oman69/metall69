@@ -1,0 +1,29 @@
+/* MainScreen */
+
+.top-header {
+    height: 30px;
+    background-color: #EBECED;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+    align-items: center;
+    font-weight: 600;
+}
+
+.navbar-collapse {
+    flex-grow: 0;
+}
+
+#main_screen {
+    height: 300px;
+    background-image: url('/mainpage/static/1.jpg');
+    background-color: #EBECED;
+}
+
+.h1_txt {
+    text-transform: uppercase;
+    color: #000;
+}
+
+.h1_txt > h1 {
+    font-weight: bold;
+}
