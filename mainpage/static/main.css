@@ -1,8 +1,8 @@
 /* MainScreen */
 body {
     color: #212121;
+    font-size: 18px;
 }
-
 
 .top-header {
     height: 30px;
@@ -20,8 +20,9 @@ body {
 #main_screen {
     height: 90vh;
     max-height: 100vh;
-    background-image: url('/mainpage/static/1.jpg');
+    background-image: url('../static/main_screen.jpg');
     background-color: #EBECED;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4);
     display: grid;
     grid-template-columns: 1fr 3fr 2fr;
     align-content: center;
@@ -29,17 +30,18 @@ body {
 
 .h1_txt {
     text-transform: uppercase;
-    color: #000;
     margin: 20px 0;
 }
 
 .h1_txt > h1 {
     font-weight: bold;
+    color: #ffffff;
 }
 
 .h2_txt > h2 {
     font-size: 20px;
     font-weight: 400;
+    color: #ffffff;
 }
 
 .main_btn > button {
@@ -47,7 +49,7 @@ body {
 }
 
 .btn_primary {
-    border: 3px solid #01695f;
+    border: 4px solid #01695f;
     background-color: #01695f;
     color: #fff;
     padding: 10px 60px;
@@ -60,16 +62,20 @@ body {
 .btn_primary:hover {
     background-color: transparent;
     padding: 10px 60px;
-    color: #000;
 }
 
 /*SecondScreen*/
 
 #big_txt {
     max-width: 68%;
-    margin: 150px auto;
+    margin: 140px auto;
     text-align: justify;
 }
+
+#big_txt > div > h2 {
+    margin-bottom: 20px;
+}
+
 
 .home_bools {
     display: grid;
@@ -77,4 +83,19 @@ body {
     grid-gap: 60px;
     grid-auto-rows: auto;
     margin-bottom: 20px;
+}
+
+.home_bools > div >  h5 {
+    margin: 20px 0;
+}
+
+.img_bools {
+    width: 70px;
+}
+
+.hor_separator {
+    height: 2px;
+    width: 400px;
+    background-color: #01695f;
+    margin: 10px auto 50px auto;
 }
