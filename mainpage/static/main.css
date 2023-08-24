@@ -117,3 +117,7 @@ body {
     margin-bottom: 20px;
     padding: 140px 0;
 }
+
+.whatwedo_bools > div > h5 {
+    margin: 10px 0;
+}
