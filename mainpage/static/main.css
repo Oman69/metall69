@@ -115,9 +115,29 @@ body {
     grid-gap: 60px;
     grid-auto-rows: auto;
     margin-bottom: 20px;
-    padding: 140px 0;
+    padding: 40px 0 140px 0;
 }
 
 .whatwedo_bools > div > h5 {
     margin: 10px 0;
+}
+
+.container > h2 {
+    padding-top: 140px;
+}
+
+
+#OurProjects {
+    height: 50vh;
+}
+
+.projects_images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.projects_images > img {
+    max-width: 300px;
+    width: 100%;
+
 }
