@@ -99,3 +99,21 @@ body {
     background-color: #01695f;
     margin: 10px auto 50px auto;
 }
+
+
+#WhatWeDo {
+    background-color: #EBECED;
+    height: 100vh;
+}
+
+.whatwedo_bools {
+    max-width: 68%;
+    margin: 0 auto;
+    text-align: justify;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 60px;
+    grid-auto-rows: auto;
+    margin-bottom: 20px;
+    padding: 140px 0;
+}
