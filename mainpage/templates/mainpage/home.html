@@ -52,7 +52,7 @@
     <div class="container">
 
         <h2>ЧТО МЫ ИЗГОТАВЛИВАЕМ</h2>
-    </div>
+
     <div class="whatwedo_bools">
         <!-- First Row -->
         <div class="">
@@ -87,12 +87,15 @@
             <p>Из металлического профиля луюбых типоразмеров методом полуавтоматической сварки</p>
         </div>
     </div>
-
-
-
+    </div>
 </section>
+
+<!-- Start Section -->
+
 <section id="OurProjects">
     <div class="container">
+        <h2>ПРИМЕРЫ ПРОЕКТОВ</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A commodi consequatur debitis deserunt dolores eos in maiores molestiae, molestias nemo nihil nisi quae quo recusandae repellendus repudiandae sunt ullam ut vel voluptatum. Aperiam consequuntur deserunt dicta dolor, error maxime minus non nostrum, odio provident quos sunt unde veritatis. Fugiat, tenetur.</p>
     <div class="projects_images">
         {% for item in Random_projects %}
         <img src="media/{{ item.image }}" alt="">
@@ -100,7 +103,56 @@
     </div>
     </div>
 
+</section>
+
+<!-- Start Section -->
+
+<section id="SomeBulletins">
+
+    <div class="container">
+
+        <h2>НЕМНОГО ЦИФР О НАС</h2>
+
+    <div class="whatwedo_bools">
+        <!-- First Row -->
+        <div class="">
+            <p class="big_int">205</p>
+            <h5 >проектов выполнено</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, explicabo.</p>
+        </div>
+        <div class="">
+            <p class="big_int">342</p>
+            <h5>этажа лестниц сварено</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, ut.</p>
+        </div>
+        <div class="">
+            <p class="big_int">12 000</p>
+            <h5>кг металлоизделий в месяц</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, vero!</p>
+        </div>
+        <!-- Second Row -->
+        <div class="">
+            <p class="big_int">8</p>
+            <h5>сварщиков 6 разряда</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, esse.</p>
+        </div>
+        <div class="">
+            <p class="big_int">2014</p>
+            <h5>год открытия производства</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, quo.</p>
+        </div>
+        <div class="">
+            <p class="big_int">96</p>
+            <h5>процентов довольных клиентов</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, nesciunt.</p>
+        </div>
+    </div>
+    </div>
+
+
 
 </section>
+
+
 
 {% endblock %}

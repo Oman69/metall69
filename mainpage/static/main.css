@@ -5,12 +5,17 @@ body {
 }
 
 .top-header {
-    height: 30px;
+    height: 40px;
     background-color: #EBECED;
     display: grid;
     grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
     align-items: center;
     font-weight: 600;
+    position: fixed;
+    width: 100%;
+    -webkit-box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
 }
 
 .navbar-collapse {
@@ -107,7 +112,7 @@ body {
 }
 
 .whatwedo_bools {
-    max-width: 68%;
+    /*max-width: 68%;*/
     margin: 0 auto;
     text-align: justify;
     display: grid;
@@ -123,21 +128,35 @@ body {
 }
 
 .container > h2 {
-    padding-top: 140px;
+    padding: 140px 0 20px 0;
 }
 
 
 #OurProjects {
-    height: 50vh;
+    height: auto;
+    padding-bottom: 140px;
 }
 
 .projects_images {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    margin: 70px 0;
 }
 
 .projects_images > img {
     max-width: 300px;
     width: 100%;
 
+}
+
+
+#SomeBulletins {
+    background-color: #2B3035;
+    color: #F8F9FA;
+}
+
+.big_int {
+    font-size: 50px;
+    font-weight: 700;
+    color: #01695f;
 }
