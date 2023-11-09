@@ -23,7 +23,7 @@ def home(request):
 
 
 def stair(request):
-    return HttpResponse('Лестницы!')
+    return render(request, 'mainpage/lestnicy.html')
 
 
 def shelter(request):

@@ -48,13 +48,10 @@
           <a class="nav-link" href="#">Контакты</a>
         </li>
       </ul>
-<!--      <span class="navbar-text" style="text-align: right">-->
-<!--        +7 900 111-05-54-->
-<!--      </span>-->
     </div>
   </div>
 </nav>
-<section id="main_screen">
+<section id="{% block main_screen_class %}main_screen_home{% endblock %}">
   <span></span>
   <span>
     <div class="h1_txt">
@@ -70,6 +67,35 @@
         Base H2
         {% endblock %}
     </h2>
+    </div>
+    <div class="digits">
+      <div class="item">
+        <div class="item_number">
+
+        {% block num_1%}10{% endblock %}
+        </div>
+        <div class="item_txt">
+        {% block txt_1%}лет опыта{% endblock %}
+        </div>
+      </div>
+      <div class="item">
+        <div class="item_number">
+
+        {% block num_2%}>200{% endblock %}
+        </div>
+        <div class="item_txt">
+        {% block txt_2%}проектов выполнено{% endblock %}
+        </div>
+      </div>
+      <div class="item">
+        <div class="item_number">
+
+        {% block num_3%}6{% endblock %}
+        </div>
+        <div class="item_txt">
+        {% block txt_3%}сварочных постов{% endblock %}
+        </div>
+      </div>
     </div>
     <span class="main_btn">
         <button type="button" class="btn_primary">Подробнее</button>
@@ -101,13 +127,10 @@
         <i class="bi bi-whatsapp"> </i>
       </a>
       <a href="" class="me-4 text-reset">
-        <i class="bi bi-telegram"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
         <i class="bi bi-instagram"></i>
       </a>
       <a href="" class="me-4 text-reset">
-       <i class="bi bi-pinterest"></i>
+        <i class="bi bi-youtube"></i>
       </a>
     </div>
     <!-- Right -->
