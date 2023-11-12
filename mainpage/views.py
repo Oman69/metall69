@@ -23,11 +23,13 @@ def home(request):
 
 
 def stair(request):
-    return render(request, 'mainpage/lestnicy.html')
+    all_stairs = Stair.objects.all()
+    return render(request, 'mainpage/lestnicy.html', {'Projects': all_stairs})
 
 
 def shelter(request):
-    return HttpResponse('Навесы!')
+    all_shelters = Shelter.objects.all()
+    return render(request, 'mainpage/navesy.html', {'Projects': all_shelters})
 
 
 def fence(request):

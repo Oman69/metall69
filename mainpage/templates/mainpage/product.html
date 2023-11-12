@@ -68,18 +68,22 @@
         <!-- First Row -->
         <div>
             <h5><i class="bi bi-star"></i> Эстетика</h5>
-            <p class="mgb-60">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi corporis doloribus est illum neque nesciunt omnis praesentium quia quos rerum.</p>
-            <h5><i class="bi bi-star"></i> Эстетика</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi corporis doloribus est illum neque nesciunt omnis praesentium quia quos rerum.</p>
+            <p class="mgb-60">{% block txt_advantages_1 %}Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Animi corporis doloribus est illum neque nesciunt omnis praesentium quia quos rerum.{% endblock %}</p>
+            <h5><i class="bi bi-star"></i> 	Долгий срок службы</h5>
+            <p>{% block txt_advantages_2 %}Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Animi corporis doloribus est illum neque nesciunt omnis praesentium quia quos rerum.{% endblock %}</p>
         </div>
         <div>
             <img src="../static/images/lestnica_adv.jpg" alt="" class="advantages_img">
         </div>
         <div>
-            <h5><i class="bi bi-star"></i> Эстетика</h5>
-            <p class="mgb-60">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi corporis doloribus est illum neque nesciunt omnis praesentium quia quos rerum.</p>
-            <h5><i class="bi bi-star"></i> Эстетика</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi corporis doloribus est illum neque nesciunt omnis praesentium quia quos rerum.</p>
+            <h5><i class="bi bi-star"></i> Прочная конструкция</h5>
+            <p class="mgb-60">{% block txt_advantages_3 %}Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Animi corporis doloribus est illum neque nesciunt omnis praesentium quia quos rerum.{% endblock %}</p>
+            <h5><i class="bi bi-star"></i> Устойчивы к коррозии</h5>
+            <p>{% block txt_advantages_4 %}Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Animi corporis doloribus est illum neque nesciunt omnis praesentium quia quos rerum.{% endblock %}</p>
         </div>
     </div>
     </div>
@@ -103,8 +107,8 @@
             <h5>3D макет бесплатно</h5>
         </div>
         </div>
-        <p>Наше производство расположено по адресу: <b>г. Тверь, ул. Спартака, д. 47</b>. Изготовление металлоизделий осуществляется с учетом требований, стандартов ГОСТов,
-        с использованием качественного профилированного металлопроката. При сборке металлических лестниц применяется сварной метод соединения элементов, что гарантирует всей конструкции максимальную прочность. Обратившись в нашу компанию, вы сможете выгодно купить металлическую лестницу для частного дома из предложенных вариантов или заказать ее изготовление по собственному проекту. Сотрудники компании проконсультируют с учетом требований, помогут определиться с выбором конфигурации, предложат наиболее подходящие по интерьеру ступени и поручни. Работаем по г. Твери, Тверской и Московской области.</p>
+        <p>{% block why_they_buy_txt %}Наше производство расположено по адресу: <b>г. Тверь, ул. Спартака, д. 47</b>. Изготовление металлоизделий осуществляется с учетом требований, стандартов ГОСТов,
+        с использованием качественного профилированного металлопроката. При сборке металлических лестниц применяется сварной метод соединения элементов, что гарантирует всей конструкции максимальную прочность. Обратившись в нашу компанию, вы сможете выгодно купить металлическую лестницу для частного дома из предложенных вариантов или заказать ее изготовление по собственному проекту. Сотрудники компании проконсультируют с учетом требований, помогут определиться с выбором конфигурации, предложат наиболее подходящие по интерьеру ступени и поручни. Работаем по г. Твери, Тверской и Московской области. {% endblock %}</p>
 
     <span class="main_btn">
         <a href="https://wa.me/79001110554"><button type="button" class="btn_types">Обсудить проект</button></a>
@@ -117,13 +121,37 @@
     <div class="container">
         <h2>Примеры работ</h2>
         <div class="projects">
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
+            {% for item in Projects %}
+            <img src="/media/{{ item.image }}" alt="">
+            {% endfor %}
 
         </div>
     </div>
+</section>
+<!--Start New Section-->
+<section id="Production">
+    <div class="container">
+        <div class="h2_block_90">
+            <h2>Этапы изготовления {% block Production_h2 %} лестницы {% endblock %}</h2>
+        </div>
+        <div class="production-map">
+            <span></span>
+            <span>
+                <h5>I. Проектирование изделия</h5>
+                {% block production_img_1 %}<img src="../static/images/project_stair.jpg" alt="" class="mgb-60">{% endblock %}
+                <h5>II. Нарезка проката и сваривание деталей</h5>
+                {% block production_img_2 %}<img src="../static/images/cat_weld.jpg" alt="" class="mgb-60">{% endblock %}
+                <h5>III. Подготовка и покраска</h5>
+                {% block production_img_3 %}<img src="../static/images/to_paint.jpg" alt="" class="mgb-60">{% endblock %}
+                <h5>IV. Монтаж на объекте</h5>
+                {% block production_img_4 %}<img src="../static/images/project_stair.jpg" alt="" class="mgb-60">{% endblock %}
+            </span>
+
+        </div>
+    </div>
+
+
+
 </section>
 
 

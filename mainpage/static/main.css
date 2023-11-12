@@ -116,6 +116,7 @@ body {
 h2 {
     text-transform: uppercase;
     margin-bottom: 40px;
+    letter-spacing: 0.1em;
 }
 
 
@@ -241,6 +242,7 @@ h2 {
     grid-template-columns: 2fr 3fr 2fr;
     grid-gap: 30px;
     padding: 50px 0 140px 0;
+    text-align: justify;
 }
 
 .mgb-60 {
@@ -262,12 +264,48 @@ h2 {
 
 #OurProjects {
     background-color: #F8F9FA;
-    height: 90vh;
+    height: auto;
 }
 
 .projects {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 40px;
-    grid-auto-rows: 200px;
+    grid-auto-rows: auto;
+}
+
+.projects > img {
+    width: 100%;
+}
+
+
+
+#Production {
+  height: auto;
+}
+
+.h2_block_90 {
+  transform-origin: -2em 5em;
+  transform: rotate(90deg);
+}
+
+.h2_block_90 > h2 {
+    font-size: 42px;
+}
+
+.production-map {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-auto-rows: auto;
+    margin: 70px 0;
+}
+
+.production-map > span > h5 {
+    padding-bottom: 20px;
+    font-size: 1.6em;
+    letter-spacing: 0.1em;
+}
+
+.production-map > span > img {
+    max-width: 90%;
 }
