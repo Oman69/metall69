@@ -1,8 +1,130 @@
 {% extends 'mainpage/base.html' %}
 {% block content %}
-<section id="big_txt">
+<!--Start New Section-->
+<section id="big_txt" xmlns="http://www.w3.org/1999/html">
     <h2>{% block h2 %} H2 Product {% endblock %}</h2>
     <p class="types_description">{% block description %} Lorem ipsum dolor sit amet, consectetur adipisicing elit. A assumenda deleniti dicta dolor dolores eum facilis illo numquam, perferendis possimus ratione reiciendis sit tempora voluptate voluptatem! Est expedita magnam molestias nostrum pariatur! Alias deleniti dignissimos expedita nisi non praesentium velit? Consequatur corporis explicabo harum illo itaque maiores maxime minus placeat repellendus, vel. Aspernatur atque eum omnis voluptatum! Accusamus assumenda, autem commodi corporis cum debitis deleniti eaque eligendi esse et excepturi explicabo fugiat laudantium maiores nobis officia placeat quaerat quidem quo sunt totam, ullam veniam voluptate. Harum, reprehenderit voluptate? Consequatur eveniet ipsam repudiandae voluptates. Architecto dolor dolorem ipsam labore nulla, similique! {% endblock %}</p>
+    <div class="types_product">
+        <div class="type">
+            <div class="types_product_img">
+                {% block types_img %}<img src="../static/images/karkas.jpg" alt="">{% endblock %}
+            </div>
+            <p class="types_product_name">
+            {% block types_name %}Lorem ipsum.{% endblock %}
+            </p>
+             <p class="types_product_price">
+            {% block types_price %}от 60 000 руб.{% endblock %}
+            </p>
+            <p class="types_product_text">
+            {% block types_text %}Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id ratione, ut. Architecto beatae ducimus enim expedita ipsa nobis, quis tempora.{% endblock %}
+            </p>
+        </div>
+        <!--Второй тип -->
+        <div class="type">
+            <div class="types_product_img">
+                {% block types_img_1 %}<img src="../static/images/karkas.jpg" alt="">{% endblock %}
+            </div>
+            <p class="types_product_name">
+            {% block types_name_1 %}Lorem ipsum.{% endblock %}
+            </p>
+             <p class="types_product_price">
+            {% block types_price_1 %}от 60 000 руб.{% endblock %}
+            </p>
+            <p class="types_product_text">
+            {% block types_text_1 %}Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id ratione, ut. Architecto beatae ducimus enim expedita ipsa nobis, quis tempora.{% endblock %}
+            </p>
+        </div>
 
+        <div class="type">
+            <div class="types_product_img">
+                {% block types_img_2 %}<img src="../static/images/karkas.jpg" alt="">{% endblock %}
+            </div>
+            <p class="types_product_name">
+            {% block types_name_2 %}Lorem ipsum.{% endblock %}
+            </p>
+             <p class="types_product_price">
+            {% block types_price_2 %}от 60 000 руб.{% endblock %}
+            </p>
+            <p class="types_product_text">
+            {% block types_text_2 %}Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id ratione, ut. Architecto beatae ducimus enim expedita ipsa nobis, quis tempora.{% endblock %}
+            </p>
+        </div>
+
+
+    </div>
+    <span class="main_btn">
+        <a href="https://wa.me/79001110554"><button type="button" class="btn_types">Рассчитать стоимость</button></a>
+
+    </span>
 </section>
+<!--Start New Section-->
+<section id="Advantages">
+
+    <div class="container">
+
+        <h2>{% block h2_advantages %}h2 advantages{% endblock %}</h2>
+
+    <div class="advantages_bools">
+        <!-- First Row -->
+        <div>
+            <h5><i class="bi bi-star"></i> Эстетика</h5>
+            <p class="mgb-60">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi corporis doloribus est illum neque nesciunt omnis praesentium quia quos rerum.</p>
+            <h5><i class="bi bi-star"></i> Эстетика</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi corporis doloribus est illum neque nesciunt omnis praesentium quia quos rerum.</p>
+        </div>
+        <div>
+            <img src="../static/images/lestnica_adv.jpg" alt="" class="advantages_img">
+        </div>
+        <div>
+            <h5><i class="bi bi-star"></i> Эстетика</h5>
+            <p class="mgb-60">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi corporis doloribus est illum neque nesciunt omnis praesentium quia quos rerum.</p>
+            <h5><i class="bi bi-star"></i> Эстетика</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi corporis doloribus est illum neque nesciunt omnis praesentium quia quos rerum.</p>
+        </div>
+    </div>
+    </div>
+</section>
+<!--Start New Section-->
+<section id="WhyTheyBuy">
+    <div class="container">
+    <h2>Почему обращаются в ПМК МеталлПрофи</h2>
+    <div class="home_bools">
+        <div class="">
+            <img src="../static/images/production.png" alt="" class="img_bools">
+            <h5>Сроки от 15 дней</h5>
+        </div>
+        <div class="">
+            <img src="../static/images/catalog.png" alt="" class="img_bools">
+            <h5>Гарантия 3 года</h5>
+
+        </div>
+        <div class="">
+            <img src="../static/images/gunspr.png" alt="" class="img_bools">
+            <h5>3D макет бесплатно</h5>
+        </div>
+        </div>
+        <p>Наше производство расположено по адресу: <b>г. Тверь, ул. Спартака, д. 47</b>. Изготовление металлоизделий осуществляется с учетом требований, стандартов ГОСТов,
+        с использованием качественного профилированного металлопроката. При сборке металлических лестниц применяется сварной метод соединения элементов, что гарантирует всей конструкции максимальную прочность. Обратившись в нашу компанию, вы сможете выгодно купить металлическую лестницу для частного дома из предложенных вариантов или заказать ее изготовление по собственному проекту. Сотрудники компании проконсультируют с учетом требований, помогут определиться с выбором конфигурации, предложат наиболее подходящие по интерьеру ступени и поручни. Работаем по г. Твери, Тверской и Московской области.</p>
+
+    <span class="main_btn">
+        <a href="https://wa.me/79001110554"><button type="button" class="btn_types">Обсудить проект</button></a>
+
+    </span>
+        </div>
+</section>
+<!--Start New Section-->
+<section id="OurProjects">
+    <div class="container">
+        <h2>Примеры работ</h2>
+        <div class="projects">
+            <div class=""></div>
+            <div class=""></div>
+            <div class=""></div>
+            <div class=""></div>
+
+        </div>
+    </div>
+</section>
+
+
 {% endblock %}
