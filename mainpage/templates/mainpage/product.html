@@ -131,23 +131,38 @@
 <!--Start New Section-->
 <section id="Production">
     <div class="container">
-        <div class="h2_block_90">
-            <h2>Этапы изготовления {% block Production_h2 %} лестницы {% endblock %}</h2>
-        </div>
+<!--        <div class="h2_block_90">-->
+            <h2>Этапы <br>изготовления {% block Production_h2 %} <br>лестницы {% endblock %}</h2>
         <ul class="gallery">
-        <li style="background: #f6bd60;"></li>
-        <li style="background: #f7ede2;"></li>
+        <li>
+            <div class="production_block">
+                <span></span>
+                <span>
+                <h5 class="mgb-40">I. Проектирование изделия</h5>
+                {% block production_img_1 %}<img src="../static/images/project_stair.jpg" alt="" class="mgb-60">{% endblock %}
+                </span>
+            </div>
+
+        </li>
+        <li>
+
+            <div class="production_block">
+                <span></span>
+                <span>
+                <h5 class="mgb-40">II. Нарезка проката и сваривание деталей</h5>
+                {% block production_img_2 %}<img src="../static/images/cat_weld.jpg" alt="" class="mgb-60">{% endblock %}
+                </span>
+            </div>
+
+        </li>
         <li style="background: #f5cac3;"></li>
         <li style="background: #84a59d;"></li>
         <li style="background: #f28482;"></li>
         </ul>
+        </div>
 <!--        <div class="production-map">-->
 <!--            <span></span>-->
 <!--            <span>-->
-<!--                <h5>I. Проектирование изделия</h5>-->
-<!--                {% block production_img_1 %}<img src="../static/images/project_stair.jpg" alt="" class="mgb-60">{% endblock %}-->
-<!--                <h5>II. Нарезка проката и сваривание деталей</h5>-->
-<!--                {% block production_img_2 %}<img src="../static/images/cat_weld.jpg" alt="" class="mgb-60">{% endblock %}-->
 <!--                <h5>III. Подготовка и покраска</h5>-->
 <!--                {% block production_img_3 %}<img src="../static/images/to_paint.jpg" alt="" class="mgb-60">{% endblock %}-->
 <!--                <h5>IV. Монтаж на объекте</h5>-->
