@@ -50,7 +50,7 @@
           <a class="nav-link" href="#">Отзывы</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Контакты</a>
+          <a class="nav-link" href="{% url 'contacts' %}">Контакты</a>
         </li>
       </ul>
     </div>
@@ -115,32 +115,6 @@
 {% endblock %}
 <!-- Footer -->
 <footer class="text-center text-lg-start bg-light text-muted">
-  <!-- Section: Social media -->
-  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-    <!-- Left -->
-
-<div class="me-5 d-none d-lg-block">
-      <span>Следите за нами в социальных сетях:</span>
-
-  </div>
-
-    <!-- Left -->
-
-    <!-- Right -->
-    <div>
-      <a href="https://wa.me/79001110554" class="me-4 text-reset">
-        <i class="bi bi-whatsapp"> </i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="bi bi-instagram"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="bi bi-youtube"></i>
-      </a>
-    </div>
-    <!-- Right -->
-  </section>
-  <!-- Section: Social media -->
 
   <!-- Section: Links  -->
   <section class="">
@@ -194,7 +168,7 @@
             <a href="#!" class="text-reset">Отзывы</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Как проехать</a>
+            <a href="{% url 'contacts' %}" class="text-reset">Как проехать</a>
           </p>
           <p>
             <a href="https://www.youtube.com/@user-og4cg9gx8v" class="text-reset">Канал на YouTube</a>
@@ -206,13 +180,10 @@
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
           <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4">Контакты</h6>
-          <p><i class="fas fa-home me-3"></i> Тверь, ул. Спартака, д. 47</p>
-          <p>
-            <i class="fas fa-envelope me-3"></i>
-            info@metall69.ru
-          </p>
-          <p><i class="fas fa-print me-3"></i> + 7 900 111 05 54</p>
-          <p><i class="fas fa-phone me-3"></i> + 7 4822 64 94 89</p>
+          <p>Тверь, ул. Спартака, д. 47</p>
+          <p><a href="mailto:info@metall69.ru">info@metall69.ru</a></p>
+          <p><a href="tel:+79001110554">+7 900 111 05 54</a></p>
+          <p><a href="tel:+74822649489">+7 4822 64 94 89</a></p>
         </div>
         <!-- Grid column -->
       </div>
@@ -220,7 +191,6 @@
     </div>
   </section>
   <!-- Section: Links  -->
-
   <!-- Copyright -->
   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
     © 2023 Copyright:

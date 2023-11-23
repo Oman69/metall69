@@ -9,4 +9,5 @@ urlpatterns = [
     path('navesy/', views.shelter, name='shelter'),
     path('zabori/', views.fence, name='fence'),
     path('besedki/', views.pergola, name='pergola'),
+    path('contacts/', views.contacts, name='contacts'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

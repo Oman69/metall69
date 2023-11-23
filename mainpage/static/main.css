@@ -4,6 +4,11 @@ body {
     font-size: 18px;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .top-header {
     height: 50px;
     background-color: #2B3035;
@@ -115,7 +120,6 @@ body {
 
 h2 {
     text-transform: uppercase;
-    margin-bottom: 40px;
     letter-spacing: 0.1em;
 }
 
@@ -252,7 +256,7 @@ h2 {
 
 
 .mgb-40 {
-    display: inline-block;
+    display: block;
     margin-bottom: 40px;
 }
 
@@ -286,12 +290,13 @@ h2 {
 
 
 #Production {
-  height: auto;
+    height: auto;
+    margin-bottom: 140px;
 }
 
 .h2_block_90 {
-  transform-origin: -2em 7em;
-  transform: rotate(90deg);
+    transform-origin: -2em 7em;
+    transform: rotate(90deg);
 }
 
 .h2_block_90 > h2 {
@@ -315,7 +320,7 @@ h2 {
 	grid-row-gap: 1rem;
 	overflow: scroll;
 	height: 72vh;
-	scroll-snap-type: x mandatory;
+	scroll-snap-type: y mandatory;
 	scroll-padding: 1rem;
 }
 
@@ -331,7 +336,6 @@ h2 {
 	scroll-snap-align: center;
 	display: inline-block;
 	border-radius: 3px;
-	font-size: 0;
 }
 
 .production_block {
@@ -346,5 +350,60 @@ h2 {
 
 .production_block > span > img {
     max-width: 80%;
+    box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+@keyframes move {
+	from {
+		margin-left: 300px;
+	}
+	to {
+		margin-left: 600px;
+	}
+}
+
+.hand_move {
+    position: relative;
+    top: 450px;
+	animation-direction: alternate-reverse;
+	animation-duration: 2s;
+	animation-name: move;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	width: 5em;
+	height: 5em;
+}
+
+.hand_move > img {
+    width: inherit;
+
+}
+
+#TextManager {
+    background-color: #EBECED;
+    height: auto;
+    padding: 140px 0;
+
+}
+
+.tm_content {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+
+}
+
+.tm_heading {
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.tm_description {
+    font-size: 20px;
+
+}
+
+.tm_content_manager > img {
+    max-width: 100%;
+    border-radius: 10%;
     box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
 }

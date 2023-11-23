@@ -38,3 +38,6 @@ def fence(request):
 
 def pergola(request):
     return HttpResponse('Беседки!')
+
+def contacts(request):
+    return HttpResponse('Контакты!')
