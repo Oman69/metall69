@@ -35,8 +35,8 @@ a {
 #main_screen_home {
     height: 90vh;
     max-height: 100vh;
-    background-image: url('../static/images/main_screen.jpg');
     background-color: #EBECED;
+    background-image: url('../static/images/main_screen.jpg');
     box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.6);
     display: grid;
     grid-template-columns: 1fr 3fr 2fr;
@@ -47,6 +47,45 @@ a {
     height: 90vh;
     max-height: 100vh;
     background-image: url('../static/images/main_screen_stair.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #EBECED;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.6);
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr;
+    align-content: center;
+}
+
+#main_screen_navesy {
+    height: 90vh;
+    max-height: 100vh;
+    background-image: url('../static/images/naves.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #EBECED;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.6);
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr;
+    align-content: center;
+}
+
+#main_screen_fence {
+    height: 90vh;
+    max-height: 100vh;
+    background-image: url('../static/images/man_zabor.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #EBECED;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.6);
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr;
+    align-content: center;
+}
+
+#main_screen_pergola {
+    height: 90vh;
+    max-height: 100vh;
+    background-image: url('../static/images/main_pergola.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #EBECED;
@@ -121,6 +160,7 @@ a {
 h2 {
     text-transform: uppercase;
     letter-spacing: 0.1em;
+    margin-bottom: 40px;
 }
 
 
@@ -218,6 +258,11 @@ h2 {
     font-size: 24px;
 }
 
+.types_product_price {
+    font-weight: 700;
+    color: #01695f;
+}
+
 .btn_types {
     border: 4px solid #01695f;
     background-color: #01695f;
@@ -292,6 +337,11 @@ h2 {
 #Production {
     height: auto;
     margin-bottom: 140px;
+}
+
+#Production > div > h2 {
+    margin-bottom: 0;
+
 }
 
 .h2_block_90 {

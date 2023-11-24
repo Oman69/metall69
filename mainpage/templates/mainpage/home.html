@@ -1,16 +1,61 @@
 {% extends 'mainpage/base.html' %}
 {% block title %} Производство металлоконструкций в Твери | Монтаж металлоконструкций по низким ценам {% endblock %}
 
-{% block h1 %}
-производство металлоконструкций
-{% endblock %}
-
-{% block h2_desc %}
-Оказываем услуги по проектированию и изготовлениию легких металлоконструкций &#10;(лестницы, навесы, ограждения, беседки)
-и металлоизделий для частных заказчиков и юридических лиц в Тверской и Московской областях
-{% endblock %}
-
 {% block content %}
+<section id="{% block main_screen_class %}main_screen_home{% endblock %}">
+  <span></span>
+  <span>
+    <div class="h1_txt">
+    <h1>
+        {% block h1 %}
+        производство металлоконструкций
+        {% endblock %}
+    </h1>
+  </div>
+    <div class="h3_txt">
+    <h3>
+      {% block h2_desc %}
+        Оказываем услуги по проектированию и изготовлениию легких металлоконструкций &#10;(лестницы, навесы, ограждения, беседки)
+        и металлоизделий для частных заказчиков и юридических лиц в Тверской и Московской областях
+        {% endblock %}
+    </h3>
+    </div>
+    <div class="digits">
+      <div class="item">
+        <div class="item_number">
+
+        {% block num_1%}10{% endblock %}
+        </div>
+        <div class="item_txt">
+        {% block txt_1%}лет опыта{% endblock %}
+        </div>
+      </div>
+      <div class="item">
+        <div class="item_number">
+
+        {% block num_2%}>200{% endblock %}
+        </div>
+        <div class="item_txt">
+        {% block txt_2%}проектов выполнено{% endblock %}
+        </div>
+      </div>
+      <div class="item">
+        <div class="item_number">
+
+        {% block num_3%}6{% endblock %}
+        </div>
+        <div class="item_txt">
+        {% block txt_3%}сварочных постов{% endblock %}
+        </div>
+      </div>
+    </div>
+    <span class="main_btn">
+        <a href="#big_txt"><button type="button" class="btn_primary">Подробнее</button></a>
+
+    </span>
+  </span>
+
+</section>
 <section id="big_txt" xmlns="http://www.w3.org/1999/html">
     <div class="container-fluid">
         <div class="home_bools">

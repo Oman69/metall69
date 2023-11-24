@@ -33,11 +33,14 @@ def shelter(request):
 
 
 def fence(request):
-    return HttpResponse('Ограждение!')
+    all_fence = Fence.objects.all()
+    return render(request, 'mainpage/zabori.html', {'Projects': all_fence})
 
 
 def pergola(request):
-    return HttpResponse('Беседки!')
+    all_pergolas = Pergola.objects.all()
+    return render(request, 'mainpage/besedki.html', {'Projects': all_pergolas})
+
 
 def contacts(request):
-    return HttpResponse('Контакты!')
+    return render(request, 'mainpage/contacts.html')

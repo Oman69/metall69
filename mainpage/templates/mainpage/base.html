@@ -23,7 +23,7 @@
 </div>
 <nav class="navbar navbar-expand-xxl bg-body-tertiary" data-bs-theme="dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="{% url 'home' %}">Logo</a>
+    <a class="navbar-brand" href="{% url 'home' %}">ПМК МеталлПрофи</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -34,7 +34,7 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Услуги
+            Изделия
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="{% url 'stair' %}">Лестницы</a></li>
@@ -56,59 +56,6 @@
     </div>
   </div>
 </nav>
-<section id="{% block main_screen_class %}main_screen_home{% endblock %}">
-  <span></span>
-  <span>
-    <div class="h1_txt">
-    <h1>
-        {% block h1 %}
-        Base H1
-        {% endblock %}
-    </h1>
-  </div>
-    <div class="h3_txt">
-    <h3>
-      {% block h2_desc %}
-        Base H2
-        {% endblock %}
-    </h3>
-    </div>
-    <div class="digits">
-      <div class="item">
-        <div class="item_number">
-
-        {% block num_1%}10{% endblock %}
-        </div>
-        <div class="item_txt">
-        {% block txt_1%}лет опыта{% endblock %}
-        </div>
-      </div>
-      <div class="item">
-        <div class="item_number">
-
-        {% block num_2%}>200{% endblock %}
-        </div>
-        <div class="item_txt">
-        {% block txt_2%}проектов выполнено{% endblock %}
-        </div>
-      </div>
-      <div class="item">
-        <div class="item_number">
-
-        {% block num_3%}6{% endblock %}
-        </div>
-        <div class="item_txt">
-        {% block txt_3%}сварочных постов{% endblock %}
-        </div>
-      </div>
-    </div>
-    <span class="main_btn">
-        <a href="#big_txt"><button type="button" class="btn_primary">Подробнее</button></a>
-
-    </span>
-  </span>
-
-</section>
 
 {% block content %}
 
@@ -138,7 +85,7 @@
         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
           <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4">
-            услуги
+            изделия
           </h6>
           <p>
             <a href="{% url 'stair' %}" class="text-reset">Лестницы</a>

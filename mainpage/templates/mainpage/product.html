@@ -1,5 +1,58 @@
 {% extends 'mainpage/base.html' %}
 {% block content %}
+<section id="{% block main_screen_class %}main_screen_home{% endblock %}">
+  <span></span>
+  <span>
+    <div class="h1_txt">
+    <h1>
+        {% block h1 %}
+        Base H1
+        {% endblock %}
+    </h1>
+  </div>
+    <div class="h3_txt">
+    <h3>
+      {% block h2_desc %}
+        Base H2
+        {% endblock %}
+    </h3>
+    </div>
+    <div class="digits">
+      <div class="item">
+        <div class="item_number">
+
+        {% block num_1%}10{% endblock %}
+        </div>
+        <div class="item_txt">
+        {% block txt_1%}лет опыта{% endblock %}
+        </div>
+      </div>
+      <div class="item">
+        <div class="item_number">
+
+        {% block num_2%}>200{% endblock %}
+        </div>
+        <div class="item_txt">
+        {% block txt_2%}проектов выполнено{% endblock %}
+        </div>
+      </div>
+      <div class="item">
+        <div class="item_number">
+
+        {% block num_3%}6{% endblock %}
+        </div>
+        <div class="item_txt">
+        {% block txt_3%}сварочных постов{% endblock %}
+        </div>
+      </div>
+    </div>
+    <span class="main_btn">
+        <a href="#big_txt"><button type="button" class="btn_primary">Подробнее</button></a>
+
+    </span>
+  </span>
+
+</section>
 <!--Start New Section-->
 <section id="big_txt" xmlns="http://www.w3.org/1999/html">
     <h2>{% block h2 %} H2 Product {% endblock %}</h2>
@@ -75,7 +128,7 @@
                 Animi corporis doloribus est illum neque nesciunt omnis praesentium quia quos rerum.{% endblock %}</p>
         </div>
         <div>
-            <img src="../static/images/lestnica_adv.jpg" alt="" class="advantages_img">
+            {% block advantage_img %}<img src="../static/images/lestnica_adv.jpg" alt="" class="advantages_img">{% endblock %}
         </div>
         <div>
             <h5><i class="bi bi-star"></i> Прочная конструкция</h5>
@@ -107,8 +160,7 @@
             <h5>3D макет бесплатно</h5>
         </div>
         </div>
-        <p>{% block why_they_buy_txt %}Наше производство расположено по адресу: <b>г. Тверь, ул. Спартака, д. 47</b>. Изготовление металлоизделий осуществляется с учетом требований, стандартов ГОСТов,
-        с использованием качественного профилированного металлопроката. При сборке металлических лестниц применяется сварной метод соединения элементов, что гарантирует всей конструкции максимальную прочность. Обратившись в нашу компанию, вы сможете выгодно купить металлическую лестницу для частного дома из предложенных вариантов или заказать ее изготовление по собственному проекту. Сотрудники компании проконсультируют с учетом требований, помогут определиться с выбором конфигурации, предложат наиболее подходящие по интерьеру ступени и поручни. Работаем по г. Твери, Тверской и Московской области. {% endblock %}</p>
+        <p>{% block why_they_buy_txt %} Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam repellat similique temporibus? Aperiam dolore eius labore pariatur quaerat quas sint tempore. Aliquam consectetur consequuntur cupiditate deleniti, dignissimos dolore eius eos error fugit id illum nostrum nulla optio, pariatur praesentium quasi sed sint suscipit tempore ut veniam vero voluptate voluptatibus. Accusantium alias aliquam aut blanditiis consectetur dolorem doloribus eaque eius explicabo, facere harum libero modi molestiae officiis pariatur quaerat ratione reiciendis repellendus rerum sapiente sequi sit sunt vel. Aliquid amet asperiores consectetur deleniti eligendi eveniet exercitationem fugiat ipsa nostrum nulla obcaecati officia quo, repellendus sit temporibus? Debitis est expedita modi totam?{% endblock %}</p>
 
     <span class="main_btn">
         <a href="https://wa.me/79001110554"><button type="button" class="btn_types">Обсудить проект</button></a>
@@ -131,7 +183,7 @@
 <!--Start New Section-->
 <section id="Production">
     <div class="container">
-        <h2>Этапы <br>изготовления {% block Production_h2 %} <br>лестницы {% endblock %}</h2>
+        <h2>Этапы <br>изготовления <br>{% block Production_h2 %} ENTER PRODUCT {% endblock %}</h2>
         <div class="hand_move"><img src="../static/images/finger-100.png" alt=""></div>
         <ul class="gallery">
 
@@ -140,7 +192,11 @@
                 <span></span>
                 <span>
                 <h5 class="mgb-40">I. Проектирование изделия</h5>
-                <p>На этом этапе по уже готовым замерам помещения производится проектирование, <br> подбор оптимального шага и проступи под конкретное помещение и 3D - визуализация будущей лестницы.</p>
+                <p>
+                {% block production_txt_1 %}
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto assumenda, cum eveniet fugiat incidunt nam qui quo tempora voluptate voluptates. Aspernatur assumenda corporis ducimus ea eius enim excepturi exercitationem impedit ipsam itaque nihil nostrum omnis perferendis praesentium quia, quibusdam quidem quis recusandae repellat sapiente sit soluta totam vel veritatis voluptatibus.
+                {% endblock %}
+                </p>
                 {% block production_img_1 %}<img src="../static/images/project_stair.jpg" alt="" class="mgb-60">{% endblock %}
                 </span>
             </div>
@@ -152,7 +208,11 @@
                 <span></span>
                 <span>
                 <h5 class="mgb-40">II. Нарезка проката и сваривание деталей</h5>
-                <p>Металлопрокат зачищается от ржавчины, производится разметка и нарезка профилированных труб. <br>Следующим этапом детали скрепляются между собой с помощью сварного соединения.</p>
+                <p>
+                {% block production_txt_2 %}
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto assumenda, cum eveniet fugiat incidunt nam qui quo tempora voluptate voluptates. Aspernatur assumenda corporis ducimus ea eius enim excepturi exercitationem impedit ipsam itaque nihil nostrum omnis perferendis praesentium quia, quibusdam quidem quis recusandae repellat sapiente sit soluta totam vel veritatis voluptatibus.
+                {% endblock %}
+                </p>
                 {% block production_img_2 %}<img src="../static/images/cat_weld.jpg" alt="" class="mgb-60">{% endblock %}
                 </span>
             </div>
@@ -164,8 +224,11 @@
             <span></span>
             <span>
             <h5 class="mgb-40">III. Подготовка и покраска изделия</h5>
-            <p>Сваренное изделие полностью зачищается от черновых сварных швов и производственных окалин. <br> Дальше изделие обезжиривается и покрывается 2-мя слоями профессиональной грунт-эмали Certa.</p>
-            {% block production_img_3 %}<img src="../static/images/cat_weld.jpg" alt="" class="mgb-60">{% endblock %}
+            <p>
+            {% block production_txt_3 %}
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto assumenda, cum eveniet fugiat incidunt nam qui quo tempora voluptate voluptates. Aspernatur assumenda corporis ducimus ea eius enim excepturi exercitationem impedit ipsam itaque nihil nostrum omnis perferendis praesentium quia, quibusdam quidem quis recusandae repellat sapiente sit soluta totam vel veritatis voluptatibus.
+            {% endblock %}</p>
+            {% block production_img_3 %}<img src="../static/images/to_paint.jpg" alt="" class="mgb-60">{% endblock %}
             </span>
         </div>
 
@@ -175,9 +238,12 @@
         <div class="production_block">
             <span></span>
             <span>
-            <h5 class="mgb-40">III. Подготовка и покраска изделия</h5>
-            <p>Осуществляется доставка металлоконструкции на объект Заказчика. <br> Монтажные работы лестницы по месту как правило занимают 1-2 рабочих дня.</p>
-            {% block production_img_4 %}<img src="../static/images/cat_weld.jpg" alt="" class="mgb-60">{% endblock %}
+            <h5 class="mgb-40">IV. Доставка и монтаж конструкции</h5>
+
+            <p>{% block production_txt_4 %}
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto assumenda, cum eveniet fugiat incidunt nam qui quo tempora voluptate voluptates. Aspernatur assumenda corporis ducimus ea eius enim excepturi exercitationem impedit ipsam itaque nihil nostrum omnis perferendis praesentium quia, quibusdam quidem quis recusandae repellat sapiente sit soluta totam vel veritatis voluptatibus.
+            {% endblock %}</p>
+            {% block production_img_4 %}<img src="../static/images/completed.jpg" alt="" class="mgb-60">{% endblock %}
             </span>
         </div>
 
@@ -200,7 +266,7 @@
         Остались вопросы?
         </div>
         <div class="tm_description">
-        Задайте их онлайн нашему специалисту по лестницам <br> и получите предварительный просчет стоимости
+        Задайте их онлайн нашему специалисту {% block tm_prod %} ENTER PRODUCT {% endblock %} <br> и получите предварительный просчет стоимости
         </div>
         <div class="main_btn">
         <a href="https://wa.me/79001110554"><button type="button" class="btn_types">Написать в WhatsApp</button></a>
