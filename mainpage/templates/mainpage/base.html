@@ -14,7 +14,7 @@
     <div class="top-header-bools">
       <div class=""></div>
       <div class="top-header-bool">Тверь, ул. Спартака, д. 47</div>
-      <div class="top-header-bool">+ 7 (900) 111 05 54</div>
+      <div class="top-header-bool"><a href="tel:+79001110554">+ 7 (900) 111 05 54</a></div>
       <div class="top-header-bool">info@metall69.ru</div>
       <div class=""></div>
     </div>
@@ -47,7 +47,7 @@
           <a class="nav-link" href="#">Проекты</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Отзывы</a>
+          <a class="nav-link" href="{% url 'reviews' %}">Отзывы</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{% url 'contacts' %}">Контакты</a>
@@ -112,7 +112,7 @@
             <a href="#!" class="text-reset">Проекты</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Отзывы</a>
+            <a href="{% url 'reviews' %}" class="text-reset">Отзывы</a>
           </p>
           <p>
             <a href="{% url 'contacts' %}" class="text-reset">Как проехать</a>

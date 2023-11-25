@@ -42,5 +42,8 @@ def pergola(request):
     return render(request, 'mainpage/besedki.html', {'Projects': all_pergolas})
 
 
+def reviews(request):
+    return render(request, 'mainpage/otzivy.html')
+
 def contacts(request):
     return render(request, 'mainpage/contacts.html')

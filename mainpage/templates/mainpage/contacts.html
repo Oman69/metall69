@@ -1,1 +1,42 @@
 {% extends 'mainpage/base.html' %}
+{% block title %} Контакты ПМК МеталлПрофи: адрес, телефон, как добраться {% endblock %}
+{% block content %}
+<section>
+    <div class="container">
+        <h2>Контактная информация</h2>
+        <div class="contacts_info">
+            <div class="contacts_info_txt">
+            <p class="contacts_info_txt_name">Адрес производства:</p>
+            <p>Тверь, ул. Спартака, д. 47 (промзона)</p>
+            <p class="contacts_info_txt_name">Телефоны:</p>
+            <p>+ 7 (4822) 64 94 89 <br>
+            +7 (900) 111 05 54</p>
+            <p class="contacts_info_txt_name">Время работы:</p>
+            <p>Пн-Пт 9:00 - 19:00<br>
+            Сб 11:00 - 17:00</p>
+
+            <p class="contacts_info_txt_name">Email:</p>
+            <p>info@metall69.ru</p>
+            <p class="contacts_info_txt_name">Реквизиты организации:</p>
+            <p>ИП ПЕТРОВ СЕРГЕЙ АЛЕКСАНДРОВИЧ<br>
+            ОГРНИП:322695200036247<br>
+            ИНН: 772823834440<br>
+            Банк: АО "ТИНЬКОФФ БАНК"<br>
+            БИК: 044525974<br>
+            к/с №: 30101810145250000974<br>
+            Счет №:40802810100003382644</p>
+            </div>
+            <div class="contacts_info_map">
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A005756ea66154a41be379fc66c1554d51621396242ddfc761b7ad606c42dd74b&amp;source=constructor" width="500" height="400" frameborder="0"></iframe>
+                <div class="main_btn">
+        <a href="https://wa.me/79001110554"><button type="button" class="btn_types">Написать в WhatsApp</button></a>
+        </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+{% endblock %}
