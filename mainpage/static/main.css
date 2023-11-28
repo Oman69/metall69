@@ -36,7 +36,7 @@ a {
     height: 90vh;
     max-height: 100vh;
     background-color: #EBECED;
-    background-image: url('../static/images/main_screen.jpg');
+    background-image: url('../static/images/main_screen.webp');
     box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.6);
     display: grid;
     grid-template-columns: 1fr 3fr 2fr;
@@ -46,7 +46,7 @@ a {
 #main_screen_stair {
     height: 90vh;
     max-height: 100vh;
-    background-image: url('../static/images/main_screen_stair.jpg');
+    background-image: url('../static/images/main_screen_stair.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #EBECED;
@@ -59,7 +59,7 @@ a {
 #main_screen_navesy {
     height: 90vh;
     max-height: 100vh;
-    background-image: url('../static/images/naves.jpeg');
+    background-image: url('../static/images/naves.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #EBECED;
@@ -72,7 +72,7 @@ a {
 #main_screen_fence {
     height: 90vh;
     max-height: 100vh;
-    background-image: url('../static/images/main_zabor.jpg');
+    background-image: url('../static/images/main_zabor.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #EBECED;
@@ -85,7 +85,7 @@ a {
 #main_screen_pergola {
     height: 90vh;
     max-height: 100vh;
-    background-image: url('../static/images/main_pergola.jpg');
+    background-image: url('../static/images/main_pergola.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #EBECED;
