@@ -560,13 +560,4 @@ h2 {
     .btn_types {
         padding: 10px 30px;
     }
-
-    .whatwedo_bools {
-        grid-template-columns: none;
-    }
-
-    .projects_images {
-        grid-template-columns: none;
-    }
-
 }

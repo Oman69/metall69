@@ -25,7 +25,7 @@ SECRET_KEY = 'naq!1s!p#y6k-)sq%nvrf!aronijoy$fb=pp25(7)36g@8=q)c'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['metall69.ru', 'www.metall69.ru', '127.0.0.1']
 
 
 # Application definition
