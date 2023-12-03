@@ -1,0 +1,19 @@
+{% extends 'mainpage/base.html' %}
+{% load embed_video_tags %}
+{% block title %} Выполненные проекты {% endblock %}
+{% block content %}
+<section>
+    <div class="container">
+        <h2>Проекты</h2>
+        <div class="reviews">
+            {% for item in Videos %}
+            <div class="">
+                <h4 class="">{{ item.title }}</h4>
+                <div class="hor_separator"></div>
+                <div>{% video item.url %}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

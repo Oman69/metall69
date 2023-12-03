@@ -10,5 +10,6 @@ urlpatterns = [
     path('zabori/', views.fence, name='fence'),
     path('besedki/', views.pergola, name='pergola'),
     path('otzivi/', views.reviews, name='reviews'),
+    path('projects/', views.projects, name='projects'),
     path('contacts/', views.contacts, name='contacts'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
