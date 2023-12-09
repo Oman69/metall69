@@ -40,9 +40,6 @@ class ProjectVideo(models.Model):
     description = models.TextField(max_length=1000, verbose_name='Описание видео')
     url = EmbedVideoField(verbose_name='Ссылка на видео')
     added = models.DateTimeField(auto_now_add=True, verbose_name='Дата загрузки')
-    # video = models.FileField(upload_to='project_video', null=True, verbose_name='Файл',
-    #                          validators=[
-    #                              FileExtensionValidator(allowed_extensions=['MOV', 'avi', 'mp4', 'webm', 'mkv'])])
 
     def __str__(self):
         return self.title
