@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from mainpage.models import Stair,Shelter, Pergola, Fence, ProjectVideo
+from mainpage.models import Stair,Shelter, Pergola, Fence, ProjectVideo, ReviewVideo
 import random
 
 
@@ -43,7 +43,8 @@ def pergola(request):
 
 
 def reviews(request):
-    return render(request, 'mainpage/otzivy.html')
+    review_videos = ReviewVideo.objects.all()
+    return render(request, 'mainpage/otzivy.html', {'Videos': review_videos})
 
 def projects(request):
     projects_videos = ProjectVideo.objects.all()

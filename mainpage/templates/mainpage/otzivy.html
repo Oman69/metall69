@@ -1,4 +1,5 @@
 {% extends 'mainpage/base.html' %}
+{% load embed_video_tags %}
 {% block title %} Отзывы о ПМК МеталлПрофи {% endblock %}
 {% block page_description %}➤ Отывы покупателей о компании МеталлПрофи. Звоните!{% endblock %}
 {% block content %}
@@ -6,18 +7,13 @@
     <div class="container">
         <h2>Отзывы</h2>
         <div class="reviews">
-            <div class=""><iframe width="560" height="315" src="https://www.youtube.com/embed/AnNpBT-RsRk?si=i35vwNJ29yyGR-s-"
-                                  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
-                                  encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-            <div class=""><iframe width="560" height="315" src="https://www.youtube.com/embed/gvpdIhxcNkU?si=1O2FSaYvkg3g6xSW"
-                                  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
-                                   encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-            <div class=""><iframe width="560" height="315" src="https://www.youtube.com/embed/s3rZs0WfLL4?si=I7BgLMTXlhzzkP4j"
-                                  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
-                                   encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-            <div class=""><iframe width="560" height="315" src="https://www.youtube.com/embed/zfhoYiXg_rY?si=ay6fFkDxpKt9hCDi"
-                                  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
-                                   encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+            {% for item in Videos %}
+            <div class="">
+                <h4 class="">{{ item.title }}</h4>
+                <div class="hor_separator"></div>
+                <div>{% video item.url %}</div>
+            </div>
+            {% endfor %}
         </div>
     </div>
 </section>

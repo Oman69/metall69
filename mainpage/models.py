@@ -43,3 +43,13 @@ class ProjectVideo(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class ReviewVideo(models.Model):
+    title = models.CharField(max_length=100, null=False, verbose_name='Заголовок видео')
+    description = models.TextField(max_length=1000, verbose_name='Описание видео')
+    url = EmbedVideoField(verbose_name='Ссылка на видео')
+    added = models.DateTimeField(auto_now_add=True, verbose_name='Дата загрузки')
+
+    def __str__(self):
+        return self.title
