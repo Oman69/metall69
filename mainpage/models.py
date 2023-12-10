@@ -37,7 +37,7 @@ class Pergola(models.Model):
 
 class ProjectVideo(models.Model):
     title = models.CharField(max_length=100, null=False, verbose_name='Заголовок видео')
-    description = models.TextField(max_length=1000, verbose_name='Описание видео')
+    description = models.TextField(max_length=1000, verbose_name='Описание видео', blank=True)
     url = EmbedVideoField(verbose_name='Ссылка на видео')
     added = models.DateTimeField(auto_now_add=True, verbose_name='Дата загрузки')
 
@@ -47,7 +47,7 @@ class ProjectVideo(models.Model):
 
 class ReviewVideo(models.Model):
     title = models.CharField(max_length=100, null=False, verbose_name='Заголовок видео')
-    description = models.TextField(max_length=1000, verbose_name='Описание видео')
+    description = models.TextField(max_length=1000, verbose_name='Описание видео', blank=True)
     url = EmbedVideoField(verbose_name='Ссылка на видео')
     added = models.DateTimeField(auto_now_add=True, verbose_name='Дата загрузки')
 
