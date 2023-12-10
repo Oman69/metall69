@@ -468,6 +468,10 @@ h2 {
     margin-bottom: 0.2rem;
 }
 
+.contacts_info_map {
+    max-width: 100%
+}
+
 
 .reviews {
     display: grid;
@@ -569,4 +573,11 @@ h2 {
         grid-template-columns: none;
     }
 
+    .reviews {
+        grid-template-columns: none;
+    }
+
+    .contacts_info {
+        grid-template-columns: none;
+    }
 }
