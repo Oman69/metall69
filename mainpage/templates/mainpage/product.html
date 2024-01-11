@@ -108,10 +108,10 @@
     <span class="main_btn">
         <form method="post" action="{% url 'message' %}">
         {% csrf_token %}
-        <p>Введите номер:<br> <input name="phone" type="tel" placeholder="+7 999 999 99 99"/></p>
-        <input type="submit" value="Send" class="btn_types"/>
+        <p>Оставьте номер телефона в форме ниже и мы ответим на все интересующие вопросы:<br></p> <input name="phone" type="tel" placeholder="+7 999 999 99 99"/></p>
+        <input type="submit" value="Рассчитать стоимость" class="btn_types"/>
     </form>
-        <a href="https://wa.me/79001110554"><button type="button" class="btn_types">Рассчитать стоимость</button></a>
+<!--        <a href="https://wa.me/79001110554"><button type="button" class="btn_types">Рассчитать стоимость</button></a>-->
 
     </span>
 </section>
