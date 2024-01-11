@@ -1,7 +1,9 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from mainpage.models import Stair,Shelter, Pergola, Fence, ProjectVideo, ReviewVideo
 import random
+from django.core.mail import send_mail, BadHeaderError
+from metall.settings import FROM_EMAIL, TO_EMAIL
 
 
 def get_random_project(query_set):
@@ -52,3 +54,18 @@ def projects(request):
 
 def contacts(request):
     return render(request, 'mainpage/contacts.html')
+
+def send_email(request):
+    subject = 'Заявка с сайта metall69.ru'
+    phone = request.POST.get("phone", "")
+    message = 'Оставлена заявка с номером: ' + phone
+    if message:
+        try:
+            send_mail(subject, message, FROM_EMAIL, [TO_EMAIL])
+        except BadHeaderError:
+            return HttpResponse("Invalid header found.")
+        return HttpResponseRedirect("/contact/thanks/")
+    else:
+        # In reality we'd use a form class
+        # to get proper validation errors.
+        return HttpResponse("Make sure all fields are entered and valid.")

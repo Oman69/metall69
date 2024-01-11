@@ -128,3 +128,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 mimetypes.add_type("text/css", ".css", True)
+
+# Email settings
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = 'smtp.yandex.ru'
+EMAIL_HOST_USER = 'm9520867653@yandex.ru'
+EMAIL_HOST_PASSWORD = 'jphpwpqundrdhyyy'
+EMAIL_PORT = 465
+EMAIL_USE_TLS = True
+
+FROM_EMAIL = 'info@metall69.ru'
+TO_EMAIL = 'ultimatebus@yandex.ru'

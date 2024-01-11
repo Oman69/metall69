@@ -33,10 +33,10 @@ a {
 }
 
 #main_screen_home {
-    height: auto;
-    min-height: 90vh;
+    height: 90vh;
+    max-height: 100vh;
     background-color: #EBECED;
-    background-image: url('../static/images/main_screen.webp');
+    background-image: url('../static/images/main_screen.jpg');
     box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.6);
     display: grid;
     grid-template-columns: 1fr 3fr 2fr;
@@ -44,9 +44,9 @@ a {
 }
 
 #main_screen_stair {
-    height: auto;
-    min-height: 90vh;
-    background-image: url('../static/images/main_screen_stair.webp');
+    height: 90vh;
+    max-height: 100vh;
+    background-image: url('../static/images/main_screen_stair.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #EBECED;
@@ -57,9 +57,9 @@ a {
 }
 
 #main_screen_navesy {
-    height: auto;
-    min-height: 90vh;
-    background-image: url('../static/images/naves.webp');
+    height: 90vh;
+    max-height: 100vh;
+    background-image: url('../static/images/naves.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #EBECED;
@@ -70,9 +70,9 @@ a {
 }
 
 #main_screen_fence {
-    height: auto;
-    min-height: 90vh;
-    background-image: url('../static/images/main_zabor.webp');
+    height: 90vh;
+    max-height: 100vh;
+    background-image: url('../static/images/main_zabor.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #EBECED;
@@ -83,9 +83,9 @@ a {
 }
 
 #main_screen_pergola {
-    height: auto;
-    min-height: 90vh;
-    background-image: url('../static/images/main_pergola.webp');
+    height: 90vh;
+    max-height: 100vh;
+    background-image: url('../static/images/main_pergola.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #EBECED;
@@ -190,11 +190,13 @@ h2 {
 
 #WhatWeDo {
     background-color: #EBECED;
-    height: auto;
+    height: 100vh;
 }
 
 .whatwedo_bools {
+    /*max-width: 68%;*/
     margin: 0 auto;
+    text-align: justify;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 60px;
@@ -474,90 +476,4 @@ h2 {
     grid-template-columns: 1fr 1fr;
     grid-gap: 40px;
     margin-bottom: 150px;
-}
-
-
-@media screen and (max-width: 1024px) {
-    .top-header-bools {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .mobile-hidden {
-        display: none;
-    }
-
-    .digits {
-        grid-gap: 40px;
-    }
-
-    .home_bools {
-        grid-template-columns: none;
-        justify-content: center;
-    }
-
-    .whatwedo_bools {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .projects_images {
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 40px;
-    }
-
-    .types_product {
-        grid-template-columns: none;
-    }
-
-    .types_product_text {
-        margin-bottom: 5rem;
-    }
-
-    .advantages_bools {
-        grid-template-columns: none;
-    }
-
-    .projects {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .tm_content {
-        grid-template-columns: none;
-    }
-
-    .tm_content_manager {
-        grid-row: 1;
-    }
-}
-
-
-@media screen and (max-width: 768px) {
-    #Production {
-        display: none;
-    }
-}
-
-
-
-
-@media screen and (max-width: 500px) {
-
-    .top-header-bools {
-        justify-content: center;
-        grid-template-columns: none;
-    }
-    .phone-hidden {
-        display: none;
-    }
-
-    .digits {
-        display: none;
-    }
-
-    .projects {
-        grid-template-columns: none;
-    }
-
-    .btn_types {
-        padding: 10px 30px;
-    }
 }
