@@ -108,11 +108,11 @@
     <span class="main_btn">
         <form method="post" action="{% url 'message' %}">
         {% csrf_token %}
-        <p>Оставьте номер телефона в форме ниже и мы ответим на все интересующие вопросы:<br></p> <input name="phone" type="tel" placeholder="+7 999 999 99 99"/></p>
+        <label for="phoneForm" class="mgb-20">Оставьте номер телефона в форме ниже и мы ответим на все интересующие вопросы:</label>
+        <input name="phone" id="phoneForm" type="tel" class="form-control" placeholder="+7 999 999 99 99"/></p>
         <input type="submit" value="Рассчитать стоимость" class="btn_types"/>
     </form>
 <!--        <a href="https://wa.me/79001110554"><button type="button" class="btn_types">Рассчитать стоимость</button></a>-->
-
     </span>
 </section>
 <!--Start New Section-->
@@ -168,9 +168,12 @@
         <p>{% block why_they_buy_txt %} Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam repellat similique temporibus? Aperiam dolore eius labore pariatur quaerat quas sint tempore. Aliquam consectetur consequuntur cupiditate deleniti, dignissimos dolore eius eos error fugit id illum nostrum nulla optio, pariatur praesentium quasi sed sint suscipit tempore ut veniam vero voluptate voluptatibus. Accusantium alias aliquam aut blanditiis consectetur dolorem doloribus eaque eius explicabo, facere harum libero modi molestiae officiis pariatur quaerat ratione reiciendis repellendus rerum sapiente sequi sit sunt vel. Aliquid amet asperiores consectetur deleniti eligendi eveniet exercitationem fugiat ipsa nostrum nulla obcaecati officia quo, repellendus sit temporibus? Debitis est expedita modi totam?{% endblock %}</p>
 
     <span class="main_btn">
-        <a href="https://wa.me/79001110554"><button type="button" class="btn_types">Обсудить проект</button></a>
-
-    </span>
+        <form method="post" action="{% url 'message' %}">
+        {% csrf_token %}
+        <label for="phoneForm2" class="mgb-20">Оставьте номер телефона в форме ниже и мы ответим на все интересующие вопросы:</label>
+        <input name="phone" id="phoneForm2" type="tel" class="form-control" placeholder="+7 999 999 99 99"/></p>
+        <input type="submit" value="Обсудить проект" class="btn_types"/>
+    </form>
         </div>
 </section>
 <!--Start New Section-->
@@ -274,7 +277,7 @@
         Задайте их онлайн нашему специалисту {% block tm_prod %} ENTER PRODUCT {% endblock %} <br> и получите предварительный просчет стоимости
         </div>
         <div class="main_btn">
-        <a href="https://wa.me/79001110554"><button type="button" class="btn_types">Написать в WhatsApp</button></a>
+        <a href="https://wa.me/79001110554"><button type="button" class="btn_types">Написать</button></a>
         </div>
         </div>
         <div class="tm_content_manager">
