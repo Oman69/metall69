@@ -313,6 +313,16 @@ h2 {
     margin-bottom: 20px;
 }
 
+.message {
+    margin: 200px 0;
+    padding: 20px;
+    border: 3px solid #01695F;
+}
+
+.message > a {
+    font-weight: 800;
+
+}
 .advantages_img {
     display: block;
     margin: 0 auto;

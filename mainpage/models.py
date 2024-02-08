@@ -1,4 +1,3 @@
-from django.core.validators import FileExtensionValidator
 from django.db import models
 from embed_video.fields import EmbedVideoField
 
@@ -53,3 +52,16 @@ class ReviewVideo(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Order(models.Model):
+    """
+    Модель заявки
+    """
+    name = models.CharField(null=False, max_length=100, verbose_name='Имя заказчика')
+    phone = models.IntegerField(null=False, verbose_name='Номер телефона')
+    created = models.DateTimeField(auto_now_add=True, verbose_name='Дата и время обращения')
+
+    def __str__(self):
+        return self.name
+

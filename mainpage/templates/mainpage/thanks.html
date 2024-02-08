@@ -1,0 +1,13 @@
+{% extends 'mainpage/base.html' %}
+{% block title %} Страница благодарности {% endblock %}
+{% block content %}
+<div class="container">
+    <div class="message">
+        <h1>Ваша заявка успешно отправлена</h1>
+        <p>Благодарим Вас за обращение в ПМК МеталлПрофи.<br> Наш специалист свяжется с Вами в ближайшее рабочее время</p>
+        <a href="{% url 'home' %}">На главную</a>
+    </div>
+
+</div>
+
+{% endblock %}

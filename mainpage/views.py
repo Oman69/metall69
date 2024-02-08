@@ -48,24 +48,35 @@ def reviews(request):
     review_videos = ReviewVideo.objects.all()
     return render(request, 'mainpage/otzivy.html', {'Videos': review_videos})
 
+
 def projects(request):
     projects_videos = ProjectVideo.objects.all()
     return render(request, 'mainpage/projects.html', {'Videos': projects_videos})
 
+
 def contacts(request):
     return render(request, 'mainpage/contacts.html')
+
+
+def validate_phone():
+    pass
+
 
 def send_email(request):
     subject = 'Заявка с сайта metall69.ru'
     phone = request.POST.get("phone", "")
+
     message = 'Оставлена заявка с номером: ' + phone
     if message:
         try:
             send_mail(subject, message, FROM_EMAIL, [TO_EMAIL])
         except BadHeaderError:
             return HttpResponse("Invalid header found.")
-        return HttpResponseRedirect("/contact/thanks/")
+        return HttpResponseRedirect("/thanks")
     else:
-        # In reality we'd use a form class
         # to get proper validation errors.
         return HttpResponse("Make sure all fields are entered and valid.")
+
+
+def thanks_page(request):
+    return render(request, 'mainpage/thanks.html')
