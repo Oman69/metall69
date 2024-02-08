@@ -1,6 +1,6 @@
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
-from mainpage.models import Stair,Shelter, Pergola, Fence, ProjectVideo, ReviewVideo
+from mainpage.models import Stair, Shelter, Pergola, Fence, ProjectVideo, ReviewVideo, Order
 import random
 from django.core.mail import send_mail, BadHeaderError
 from metall.settings import FROM_EMAIL, TO_EMAIL
@@ -64,10 +64,14 @@ def validate_phone():
 
 def send_email(request):
     subject = 'Заявка с сайта metall69.ru'
-    phone = request.POST.get("phone", "")
+    name = request.POST.get("name", '')
+    phone = request.POST.get("phone")
 
-    message = 'Оставлена заявка с номером: ' + phone
-    if message:
+    if bool(phone):
+        message = f'Получена заявка от {name} с номером: {phone}'
+        # Добавил данные лида в БД
+        Order.objects.create(name=name, phone=phone)
+
         try:
             send_mail(subject, message, FROM_EMAIL, [TO_EMAIL])
         except BadHeaderError:
@@ -75,7 +79,7 @@ def send_email(request):
         return HttpResponseRedirect("/thanks")
     else:
         # to get proper validation errors.
-        return HttpResponse("Make sure all fields are entered and valid.")
+        return HttpResponse("Пожалуйста, введите номер телефона")
 
 
 def thanks_page(request):

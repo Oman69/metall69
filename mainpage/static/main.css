@@ -133,6 +133,11 @@ a {
     max-width: 30%;
 }
 
+.btn_border  {
+    padding: 30px;
+    border: 2px solid #01695f;
+}
+
 .main_btn > a > button {
     margin: 30px 0;
 }

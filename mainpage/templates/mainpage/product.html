@@ -105,11 +105,12 @@
 
 
     </div>
-    <span class="main_btn">
+    <span class="main_btn btn_border">
         <form method="post" action="{% url 'message' %}">
         {% csrf_token %}
         <label for="phoneForm" class="mgb-20">Оставьте номер телефона в форме ниже и мы ответим на все интересующие вопросы:</label>
-        <input name="phone" id="phoneForm" type="tel" class="form-control" placeholder="+7 999 999 99 99"/></p>
+        <input name="name" id="nameForm" type="text" class="form-control" placeholder="Ваше имя"/><br>
+        <input name="phone" id="phoneForm" type="tel" class="form-control" placeholder="+7 999 999 99 99"/><br>
         <input type="submit" value="Рассчитать стоимость" class="btn_types"/>
     </form>
 <!--        <a href="https://wa.me/79001110554"><button type="button" class="btn_types">Рассчитать стоимость</button></a>-->
@@ -167,11 +168,12 @@
         </div>
         <p>{% block why_they_buy_txt %} Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam repellat similique temporibus? Aperiam dolore eius labore pariatur quaerat quas sint tempore. Aliquam consectetur consequuntur cupiditate deleniti, dignissimos dolore eius eos error fugit id illum nostrum nulla optio, pariatur praesentium quasi sed sint suscipit tempore ut veniam vero voluptate voluptatibus. Accusantium alias aliquam aut blanditiis consectetur dolorem doloribus eaque eius explicabo, facere harum libero modi molestiae officiis pariatur quaerat ratione reiciendis repellendus rerum sapiente sequi sit sunt vel. Aliquid amet asperiores consectetur deleniti eligendi eveniet exercitationem fugiat ipsa nostrum nulla obcaecati officia quo, repellendus sit temporibus? Debitis est expedita modi totam?{% endblock %}</p>
 
-    <span class="main_btn">
+    <span class="main_btn btn_border">
         <form method="post" action="{% url 'message' %}">
         {% csrf_token %}
         <label for="phoneForm2" class="mgb-20">Оставьте номер телефона в форме ниже и мы ответим на все интересующие вопросы:</label>
-        <input name="phone" id="phoneForm2" type="tel" class="form-control" placeholder="+7 999 999 99 99"/></p>
+        <input name="name" id="nameForm2" type="text" class="form-control" placeholder="Ваше имя"/><br>
+        <input name="phone" id="phoneForm2" type="tel" class="form-control" placeholder="+7 999 999 99 99"/><br>
         <input type="submit" value="Обсудить проект" class="btn_types"/>
     </form>
         </div>
