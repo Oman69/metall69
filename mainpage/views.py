@@ -62,6 +62,9 @@ def contacts(request):
 
 
 def send_email(request):
+    """
+    Функция для отправки заявки на почту
+    """
     subject = 'Заявка с сайта metall69.ru'
     name = request.POST.get("name", '')
     phone = request.POST.get("phone")
