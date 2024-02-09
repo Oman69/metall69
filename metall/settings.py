@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mainpage',
-    'embed_video'
+    'embed_video',
+    'phonenumber_field'
 ]
 
 MIDDLEWARE = [

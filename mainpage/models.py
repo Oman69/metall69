@@ -1,5 +1,6 @@
 from django.db import models
 from embed_video.fields import EmbedVideoField
+from phonenumber_field.modelfields import PhoneNumberField
 
 
 class Stair(models.Model):
@@ -35,6 +36,9 @@ class Pergola(models.Model):
 
 
 class ProjectVideo(models.Model):
+    """
+    Модель видео проекта
+    """
     title = models.CharField(max_length=100, null=False, verbose_name='Заголовок видео')
     description = models.TextField(max_length=1000, verbose_name='Описание видео', blank=True)
     url = EmbedVideoField(verbose_name='Ссылка на видео')
@@ -45,6 +49,9 @@ class ProjectVideo(models.Model):
 
 
 class ReviewVideo(models.Model):
+    """
+    Модель видео отзыва
+    """
     title = models.CharField(max_length=100, null=False, verbose_name='Заголовок видео')
     description = models.TextField(max_length=1000, verbose_name='Описание видео', blank=True)
     url = EmbedVideoField(verbose_name='Ссылка на видео')
@@ -59,7 +66,7 @@ class Order(models.Model):
     Модель заявки
     """
     name = models.CharField(null=False, max_length=100, verbose_name='Имя заказчика')
-    phone = models.IntegerField(null=False, verbose_name='Номер телефона')
+    phone = PhoneNumberField(unique=True, null=False, blank=False, verbose_name='Номер телефона')
     created = models.DateTimeField(auto_now_add=True, verbose_name='Дата и время обращения')
 
     def __str__(self):

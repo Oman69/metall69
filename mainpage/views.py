@@ -1,5 +1,8 @@
+import phonenumbers
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
+from phonenumbers.phonenumberutil import NumberParseException
+
 from mainpage.models import Stair, Shelter, Pergola, Fence, ProjectVideo, ReviewVideo, Order
 import random
 from django.core.mail import send_mail, BadHeaderError
@@ -58,24 +61,20 @@ def contacts(request):
     return render(request, 'mainpage/contacts.html')
 
 
-def validate_phone():
-    pass
-
-
 def send_email(request):
     subject = 'Заявка с сайта metall69.ru'
     name = request.POST.get("name", '')
     phone = request.POST.get("phone")
+    try:
+        z = phonenumbers.parse(phone, "RU")
+    except NumberParseException:
+        return HttpResponse("Пожалуйста, введите корректный номер телефона")
 
-    if bool(phone):
+    if phonenumbers.is_valid_number(z):
         message = f'Получена заявка от {name} с номером: {phone}'
         # Добавил данные лида в БД
         Order.objects.create(name=name, phone=phone)
-
-        try:
-            send_mail(subject, message, FROM_EMAIL, [TO_EMAIL])
-        except BadHeaderError:
-            return HttpResponse("Invalid header found.")
+        send_mail(subject, message, FROM_EMAIL, [TO_EMAIL])
         return HttpResponseRedirect("/thanks")
     else:
         # to get proper validation errors.
