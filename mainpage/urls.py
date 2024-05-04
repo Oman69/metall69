@@ -13,6 +13,7 @@ urlpatterns = [
     path('navesy/', views.shelter, name='shelter'),
     path('zabori/', views.fence, name='fence'),
     path('besedki/', views.pergola, name='pergola'),
+    path('krylco/', views.porch, name='porch'),
     path('otzivi/', views.reviews, name='reviews'),
     path('projects/', views.projects, name='projects'),
     path('contacts/', views.contacts, name='contacts'),

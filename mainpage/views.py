@@ -46,6 +46,10 @@ def pergola(request):
     all_pergolas = Pergola.objects.all()
     return render(request, 'mainpage/besedki.html', {'Projects': all_pergolas})
 
+def porch(request):
+    all_porchs = Pergola.objects.all()
+    return render(request, 'mainpage/krylco.html', {'Projects': all_porchs})
+
 
 def reviews(request):
     review_videos = ReviewVideo.objects.all()
