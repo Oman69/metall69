@@ -3,7 +3,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from phonenumbers.phonenumberutil import NumberParseException
 
-from mainpage.models import Stair, Shelter, Pergola, Fence, ProjectVideo, ReviewVideo, Order
+from mainpage.models import Stair, Shelter, Pergola, Fence, ProjectVideo, ReviewVideo, Order, Porch
 import random
 from django.core.mail import send_mail, BadHeaderError
 from metall.settings import FROM_EMAIL, TO_EMAIL
@@ -47,7 +47,7 @@ def pergola(request):
     return render(request, 'mainpage/besedki.html', {'Projects': all_pergolas})
 
 def porch(request):
-    all_porchs = Pergola.objects.all()
+    all_porchs = Porch.objects.all()
     return render(request, 'mainpage/krylco.html', {'Projects': all_porchs})
 
 

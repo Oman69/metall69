@@ -35,6 +35,14 @@ class Pergola(models.Model):
         return self.title
 
 
+class Porch(models.Model):
+    title = models.CharField(max_length=100, verbose_name='Заголовок изображения', unique=True, null=False)
+    image = models.ImageField(upload_to='pergolas', verbose_name='Изображение', unique=True, null=False)
+
+    def __str__(self):
+        return self.title
+
+
 class ProjectVideo(models.Model):
     """
     Модель видео проекта

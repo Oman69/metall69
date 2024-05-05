@@ -95,6 +95,19 @@ a {
     align-content: center;
 }
 
+#main_screen_porch {
+    height: auto;
+    min-height: 90vh;
+    background-image: url('../static/images/porch_main.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #EBECED;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.6);
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr;
+    align-content: center;
+}
+
 .digits {
     width: auto;
     display: grid;
@@ -164,7 +177,6 @@ a {
 #big_txt {
     max-width: 68%;
     margin: 140px auto;
-    text-align: justify;
 }
 
 h2 {
@@ -563,6 +575,11 @@ h2 {
     #Production {
         display: none;
     }
+    
+    .main_btn {
+        max-width: 100%;
+    }
+    
 }
 
 
@@ -605,4 +622,13 @@ h2 {
     .contacts_info {
         grid-template-columns: none;
     }
+    
+    .hor_separator {
+        width: 100%;
+    }
+    
+    #big_txt {
+        max-width: 90%;
+    }
+    
 }
