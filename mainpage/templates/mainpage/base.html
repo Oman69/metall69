@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="en">
+{% load livereload_tags %}
+{% livereload_script %}
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}Base Title{% endblock %}</title>
@@ -18,7 +20,7 @@
     <div class="top-header-bools">
       <div class="mobile-hidden"></div>
       <div class="top-header-bool mobile-hidden">Тверь, ул. Спартака, д. 47</div>
-      <div class="top-header-bool"><a href="tel:+74822649489">+ 7 (900) 111 05 54</a></div>
+      <div class="top-header-bool"><a href="tel:+79001110554">+ 7 (900) 111 05 54</a></div>
       <div class="top-header-bool phone-hidden">info@metall69.ru</div>
       <div class="phone-hidden"></div>
     </div>
@@ -66,7 +68,7 @@
 
 {% endblock %}
 <!-- Footer -->
-<footer class="text-center text-lg-start bg-light text-muted">
+<footer class="text-center text-lg-start text-muted">
 
   <!-- Section: Links  -->
   <section class="">

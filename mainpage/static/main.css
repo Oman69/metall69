@@ -2,6 +2,7 @@
 body {
     color: #212121;
     font-size: 18px;
+    font-family: "Involve", sans-serif;
 }
 
 a {
@@ -32,6 +33,18 @@ a {
     flex-grow: 0;
 }
 
+.container {
+    max-width: 68%;
+}
+
+.main_screen_offer {
+    height: auto;
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+}
+
 #main_screen_home {
     height: auto;
     min-height: 90vh;
@@ -46,11 +59,11 @@ a {
 #main_screen_stair {
     height: auto;
     min-height: 90vh;
-    background-image: url('../static/images/main_screen_stair.webp');
+    /*background-image: url('../static/images/main_screen_stair.webp');*/
+    /*box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.6);*/
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: #EBECED;
-    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.6);
+    /*background-color: #EBECED;*/
     display: grid;
     grid-template-columns: 1fr 3fr 2fr;
     align-content: center;
@@ -109,9 +122,9 @@ a {
 }
 
 .digits {
-    width: auto;
+    max-width: 80%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1.5fr 1fr;
     /*align-items: center;*/
 }
 
@@ -121,29 +134,30 @@ a {
     font-weight: 700;
 }
 
-.digits > div.item > div.item_txt {
-    color: #ffffff;
-}
-
 .h1_txt {
     text-transform: uppercase;
-    margin: 20px 0;
+    margin: 20px 0 10px 0;
+    letter-spacing: 0.2em;
 }
 
 .h1_txt > h1 {
     font-weight: bold;
-    color: #ffffff;
+    color: #2B3035;
 }
 
 .h3_txt > h3 {
-    font-size: 20px;
-    font-weight: 400;
-    color: #ffffff;
+    font-size: 1.1em;
+    color: #2B3035;
+    margin: 2em 0;
+}
+
+.fs-light {
+    font-weight: lighter;
 }
 
 .main_btn {
     display: block;
-    max-width: 30%;
+    max-width: 100%;
 }
 
 .btn_border  {
@@ -170,6 +184,7 @@ a {
 .btn_primary:hover {
     background-color: transparent;
     padding: 10px 60px;
+    color: #000;
 }
 
 /*SecondScreen*/
@@ -351,10 +366,10 @@ h2 {
 #WhyTheyBuy {
     margin-bottom: 140px;
 }
-
-#OurProjects {
-    background-color: #F8F9FA;
-    height: auto;
+.form_and_txt {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 30px;
 }
 
 .projects {
@@ -578,6 +593,11 @@ h2 {
     
     .main_btn {
         max-width: 100%;
+    }
+
+
+    .form_and_txt {
+        grid-template-columns: none;
     }
     
 }
