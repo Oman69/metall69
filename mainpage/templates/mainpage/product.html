@@ -1,99 +1,62 @@
 {% extends 'mainpage/base.html' %}
 {% block content %}
-<section id="MainScreen">
+<section id="{% block main_screen_class %}main_screen_stair{% endblock %}">
     <div class="container">
         <div class="main_screen_offer">
 
             <div class="main_screen_txt">
-        <div class="h1_txt">
-    <h1>
-        {% block h1 %}
-        Base H1
-        {% endblock %}
-    </h1>
-  </div>
-    <div class="h3_txt">
-    <h3>
-      {% block h2_desc %}
-        Base H2
-        {% endblock %}
-    </h3>
-    </div>
-    <div class="digits">
-      <div class="item">
-        <div class="item_number">
-
-        {% block num_1%}10{% endblock %}
-        </div>
-        <div class="item_txt">
-        {% block txt_1%}лет опыта{% endblock %}
-        </div>
-      </div>
-      <div class="item">
-        <div class="item_number">
-
-        {% block num_2%}>200{% endblock %}
-        </div>
-        <div class="item_txt">
-        {% block txt_2%}проектов выполнено{% endblock %}
-        </div>
-      </div>
-      <div class="item">
-        <div class="item_number">
-
-        {% block num_3%}6{% endblock %}
-        </div>
-        <div class="item_txt">
-        {% block txt_3%}сварочных постов{% endblock %}
-        </div>
-      </div>
-    </div>
-    <span class="main_btn">
-        <a href="#big_txt"><button type="button" class="btn_primary">Подробнее</button></a>
-
-    </span>
-  </span>
-    </div>
-            <div class="main_screen_img">
-                <div id="carouselExampleCaptions" class="carousel slide">
-                  <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                  </div>
-                  <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="10000">
-                      <img src="..." class="d-block w-100" alt="...">
-                      <div class="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
-                      </div>
-                    </div>
-                    <div class="carousel-item" data-bs-interval="2000">
-                      <img src="..." class="d-block w-100" alt="...">
-                      <div class="carousel-caption d-none d-md-block">
-                        <h5>Second slide label</h5>
-                        <p>Some representative placeholder content for the second slide.</p>
-                      </div>
-                    </div>
-                    <div class="carousel-item">
-                      <img src="..." class="d-block w-100" alt="...">
-                      <div class="carousel-caption d-none d-md-block">
-                        <h5>Third slide label</h5>
-                        <p>Some representative placeholder content for the third slide.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
+                <div class="h1_txt">
+                <h1>
+                    {% block h1 %}
+                    Base H1
+                    {% endblock %}
+                </h1>
                 </div>
+                <div class="h3_txt">
+                <h3>
+                  {% block h2_desc %}
+                    Base H2
+                    {% endblock %}
+                </h3>
+                </div>
+                <div class="digits">
+                  <div class="item">
+                    <div class="item_number">
+
+                    {% block num_1%}10{% endblock %}
+                    </div>
+                    <div class="item_txt">
+                    {% block txt_1%}лет опыта{% endblock %}
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="item_number">
+
+                    {% block num_2%}>200{% endblock %}
+                    </div>
+                    <div class="item_txt">
+                    {% block txt_2%}проектов выполнено{% endblock %}
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="item_number">
+
+                    {% block num_3%}6{% endblock %}
+                    </div>
+                    <div class="item_txt">
+                    {% block txt_3%}сварочных постов{% endblock %}
+                    </div>
+                  </div>
+                </div>
+                <span class="main_btn">
+                    <a href="#big_txt"><button type="button" class="btn_primary">Подробнее</button></a>
+
+                </span>
+              </span>
+            </div>
+            <div class="main_screen_img">
         </div>
+    </div>
     </div>
 </section>
 
@@ -210,7 +173,7 @@
         </div>
         </div>
         <div class="form_and_txt">
-            <span class="main_btn btn_border">
+            <span class="main_btn btn_border box1">
                 <form method="post" action="{% url 'message' %}">
                 {% csrf_token %}
                 <label for="phoneForm2" class="mgb-20">Оставьте номер телефона в форме ниже и мы ответим на все интересующие вопросы:</label>
@@ -219,7 +182,7 @@
                 <input type="submit" value="Обсудить проект" class="btn_types"/>
                 </form>
             </span>
-            <p>{% block why_they_buy_txt %} Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam repellat similique temporibus? Aperiam dolore eius labore pariatur quaerat quas sint tempore. Aliquam consectetur consequuntur cupiditate deleniti, dignissimos dolore eius eos error fugit id illum nostrum nulla optio, pariatur praesentium quasi sed sint suscipit tempore ut veniam vero voluptate voluptatibus. Accusantium alias aliquam aut blanditiis consectetur dolorem doloribus eaque eius explicabo, facere harum libero modi molestiae officiis pariatur quaerat ratione reiciendis repellendus rerum sapiente sequi sit sunt vel. Aliquid amet asperiores consectetur deleniti eligendi eveniet exercitationem fugiat ipsa nostrum nulla obcaecati officia quo, repellendus sit temporibus? Debitis est expedita modi totam?{% endblock %}</p>
+            <p class="box2">{% block why_they_buy_txt %} Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam repellat similique temporibus? Aperiam dolore eius labore pariatur quaerat quas sint tempore. Aliquam consectetur consequuntur cupiditate deleniti, dignissimos dolore eius eos error fugit id illum nostrum nulla optio, pariatur praesentium quasi sed sint suscipit tempore ut veniam vero voluptate voluptatibus. Accusantium alias aliquam aut blanditiis consectetur dolorem doloribus eaque eius explicabo, facere harum libero modi molestiae officiis pariatur quaerat ratione reiciendis repellendus rerum sapiente sequi sit sunt vel. Aliquid amet asperiores consectetur deleniti eligendi eveniet exercitationem fugiat ipsa nostrum nulla obcaecati officia quo, repellendus sit temporibus? Debitis est expedita modi totam?{% endblock %}</p>
 
         </div>
 
@@ -240,78 +203,57 @@
 <!--Start New Section-->
 <section id="Production">
     <div class="container">
-        <h2>Этапы <br>изготовления <br>{% block Production_h2 %} ENTER PRODUCT {% endblock %}</h2>
-        <div class="hand_move"><img src="../static/images/finger-100.png" alt=""></div>
-        <ul class="gallery">
-
-        <li>
-            <div class="production_block">
-                <span></span>
-                <span>
-                <h5 class="mgb-40">I. Проектирование изделия</h5>
-                <p>
-                {% block production_txt_1 %}
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto assumenda, cum eveniet fugiat incidunt nam qui quo tempora voluptate voluptates. Aspernatur assumenda corporis ducimus ea eius enim excepturi exercitationem impedit ipsam itaque nihil nostrum omnis perferendis praesentium quia, quibusdam quidem quis recusandae repellat sapiente sit soluta totam vel veritatis voluptatibus.
-                {% endblock %}
-                </p>
-                {% block production_img_1 %}<img src="../static/images/project_stair.webp" alt="" class="mgb-60">{% endblock %}
-                </span>
+        <div class="new-carousel">
+            <div class="new-carousel-txt">
+                <h2>Этапы <br>изготовления <br>{% block Production_h2 %} ENTER PRODUCT {% endblock %}</h2>
+                <p>{% block step_decription %}Создание {% block Production_p %} металлоизделия {% endblock %} - это довольно сложный технологический процесс, который требует внимания и профессионализма на каждом этапе. Возможность совершения ошибки существует на любом из производственных этапов, поэтому доверить изготовление лестницы лучше профессиональной команде.{% endblock %}</p>
             </div>
-
-        </li>
-        <li>
-
-            <div class="production_block">
-                <span></span>
-                <span>
-                <h5 class="mgb-40">II. Нарезка проката и сваривание деталей</h5>
-                <p>
-                {% block production_txt_2 %}
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto assumenda, cum eveniet fugiat incidunt nam qui quo tempora voluptate voluptates. Aspernatur assumenda corporis ducimus ea eius enim excepturi exercitationem impedit ipsam itaque nihil nostrum omnis perferendis praesentium quia, quibusdam quidem quis recusandae repellat sapiente sit soluta totam vel veritatis voluptatibus.
-                {% endblock %}
-                </p>
-                {% block production_img_2 %}<img src="../static/images/cat_weld.webp" alt="" class="mgb-60">{% endblock %}
-                </span>
+            <div id="carouselExampleCaptions" class="carousel slide">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                  <img src="{% block step_img_1 %}../static/images/project_stair.webp{% endblock %}" class="d-block w-100 overlay" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Проектирование изделия</h5>
+                  </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                  <img src="../static/images/cat_weld.webp" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Нарезка проката и сваривание деталей</h5>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="../static/images/to_paint.webp" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Подготовка и покраска изделия</h5>
+                  </div>
+                </div>
+                  <div class="carousel-item">
+                  <img src="../static/images/stair_mont.webp" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Доставка и монтаж конструкции</h5>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
-
-        </li>
-        <li>
-
-        <div class="production_block">
-            <span></span>
-            <span>
-            <h5 class="mgb-40">III. Подготовка и покраска изделия</h5>
-            <p>
-            {% block production_txt_3 %}
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto assumenda, cum eveniet fugiat incidunt nam qui quo tempora voluptate voluptates. Aspernatur assumenda corporis ducimus ea eius enim excepturi exercitationem impedit ipsam itaque nihil nostrum omnis perferendis praesentium quia, quibusdam quidem quis recusandae repellat sapiente sit soluta totam vel veritatis voluptatibus.
-            {% endblock %}</p>
-            {% block production_img_3 %}<img src="../static/images/to_paint.webp" alt="" class="mgb-60">{% endblock %}
-            </span>
-        </div>
-
-        </li>
-        <li>
-
-        <div class="production_block">
-            <span></span>
-            <span>
-            <h5 class="mgb-40">IV. Доставка и монтаж конструкции</h5>
-
-            <p>{% block production_txt_4 %}
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto assumenda, cum eveniet fugiat incidunt nam qui quo tempora voluptate voluptates. Aspernatur assumenda corporis ducimus ea eius enim excepturi exercitationem impedit ipsam itaque nihil nostrum omnis perferendis praesentium quia, quibusdam quidem quis recusandae repellat sapiente sit soluta totam vel veritatis voluptatibus.
-            {% endblock %}</p>
-            {% block production_img_4 %}<img src="../static/images/stair_mont.webp" alt="" class="mgb-60">{% endblock %}
-            </span>
-        </div>
-
-        </li>
-
-        </ul>
+        <p></p>
+<!--        <p>{% block production_text %}Some text{% endblock %}</p>-->
         </div>
     </div>
-
-
-
 </section>
 <section id="TextManager">
     <div class="container tm_content">
