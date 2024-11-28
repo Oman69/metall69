@@ -614,6 +614,10 @@ h2 {
         grid-row: 1;
     }
 
+    .fs-light {
+        font-size: 1em;
+    }
+
 
     
 }
